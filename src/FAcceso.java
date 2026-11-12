@@ -15,8 +15,7 @@ public class FAcceso extends javax.swing.JFrame {
     Conexion cnx = new Conexion();
 
     String rol = "SELECT puesto FROM empleados WHERE nom_usr = '%s' AND nip = '%s'";
-    
-    
+
     int intentos = 0;
 
     public FAcceso() {
@@ -24,6 +23,8 @@ public class FAcceso extends javax.swing.JFrame {
         setLocationRelativeTo(this);
 
         if (cnx.conectar("localhost", "fondatel", "root", "") == 0) {
+
+        } else {
             JOptionPane.showMessageDialog(this, "Sin conexión. La ventana se cerrará...");
             System.exit(0);
         }
