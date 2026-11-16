@@ -40,10 +40,10 @@ public class FMenu extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TMenu = new javax.swing.JTable();
         jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
+        BCompleto = new javax.swing.JButton();
         CBCategoria = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         TMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -61,19 +61,19 @@ public class FMenu extends javax.swing.JFrame {
         jToolBar1.setBackground(new java.awt.Color(204, 255, 255));
         jToolBar1.setRollover(true);
 
-        jButton1.setText("COMPLETO");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setMaximumSize(new java.awt.Dimension(100, 64));
-        jButton1.setMinimumSize(new java.awt.Dimension(100, 64));
-        jButton1.setPreferredSize(new java.awt.Dimension(100, 64));
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BCompleto.setText("COMPLETO");
+        BCompleto.setFocusable(false);
+        BCompleto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BCompleto.setMaximumSize(new java.awt.Dimension(100, 64));
+        BCompleto.setMinimumSize(new java.awt.Dimension(100, 64));
+        BCompleto.setPreferredSize(new java.awt.Dimension(100, 64));
+        BCompleto.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BCompleto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BCompletoActionPerformed(evt);
             }
         });
-        jToolBar1.add(jButton1);
+        jToolBar1.add(BCompleto);
 
         CBCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         CBCategoria.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CATEGORIA:", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
@@ -124,10 +124,10 @@ public class FMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CBCategoriaItemStateChanged
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCompletoActionPerformed
         // TODO add your handling code here:
         cnx.entablar(todo, TMenu);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BCompletoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,9 +165,9 @@ public class FMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BCompleto;
     private javax.swing.JComboBox<String> CBCategoria;
     private javax.swing.JTable TMenu;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
